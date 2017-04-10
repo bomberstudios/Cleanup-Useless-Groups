@@ -22,6 +22,14 @@ function unrollGroupsInLayer(layer){
       // Group contains just another group, so let's call ourselves again
       var newLayer = layer.ungroup()
       unrollGroupsInLayer(newLayer.firstObject())
+    } else {
+      var layers = layer.layers()
+      for (var i=0; i < [layers count]; i++) {
+        var layer = [layers objectAtIndex:i]
+        if(layer.className() == "MSLayerGroup"){
+          unrollGroupsInLayer(layer)
+        }
+      }
     }
   }
 }
