@@ -1,0 +1,24 @@
+{
+  "author" : "Ale Muñoz",
+  "version" : "1.0",
+  "description" : "A plugin that cleans up your layer list by removing empty groups and flattening deeply nested groups.",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "name" : "Cleanup Useless Groups",
+      "handlers" : {
+        "run" : "onRun"
+      },
+      "identifier" : "com.bohemiancoding.sketch.runscriptidentifier"
+    }
+  ],
+  "menu" : {
+    "title" : "Cleanup Useless Groups",
+    "items" : [
+      "com.bohemiancoding.sketch.runscriptidentifier"
+    ]
+  },
+  "identifier" : "com.example.sketch.d2c66cff-a235-44dd-854e-2a7497e32c1b",
+  "authorEmail" : "ale@sketchapp.com",
+  "name" : "Cleanup Useless Groups"
+}
