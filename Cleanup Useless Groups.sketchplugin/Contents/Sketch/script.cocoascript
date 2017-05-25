@@ -4,7 +4,7 @@ var onRun = function(context) {
 
   for (var i=0; i < [layers count]; i++) {
     var layer = [layers objectAtIndex:i]
-    if(layer.className() == "MSLayerGroup"){
+    if(layer.className() == "MSLayerGroup" || layer.className() == "MSArtboardGroup"){
       unrollGroupsInLayer(layer)
     }
   }
@@ -13,7 +13,7 @@ var onRun = function(context) {
 
 function unrollGroupsInLayer(layer){
   log("unrollGroupsInLayer: " + layer)
-  if (layer.className() == "MSLayerGroup") {
+  if (layer.className() == "MSLayerGroup" || layer.className() == "MSArtboardGroup") {
     if(layer.layers().count() == 0) {
       // This is an empty group, kill it with 🔥
       layer.removeFromParent()
