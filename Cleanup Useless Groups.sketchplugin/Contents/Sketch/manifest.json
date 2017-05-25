@@ -1,6 +1,6 @@
 {
   "author" : "Ale Muñoz",
-  "version" : "1.0",
+  "version" : "1.1",
   "description" : "A plugin that cleans up your layer list by removing empty groups and flattening deeply nested groups.",
   "commands" : [
     {

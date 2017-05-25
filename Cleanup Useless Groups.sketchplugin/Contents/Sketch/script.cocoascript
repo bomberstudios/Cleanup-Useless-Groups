@@ -1,6 +1,13 @@
 var onRun = function(context) {
-  var page = context.document.currentPage()
-  var layers = page.layers()
+
+  var layers
+
+  if (context.selection.count() > 0) {
+    layers = context.selection
+  } else {
+    var page = context.document.currentPage()
+    layers = page.layers()
+  }
 
   for (var i=0; i < [layers count]; i++) {
     var layer = [layers objectAtIndex:i]
