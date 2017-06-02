@@ -1,4 +1,5 @@
 # Cleanup Useless Groups
+[![Download from Sketchpacks.com](https://badges.sketchpacks.com/plugins/com.example.sketch.d2c66cff-a235-44dd-854e-2a7497e32c1b/version.svg)](https://api.sketchpacks.com/v1/plugins/com.example.sketch.d2c66cff-a235-44dd-854e-2a7497e32c1b/download) [![Compatible Sketch Version](https://badges.sketchpacks.com/plugins/com.example.sketch.d2c66cff-a235-44dd-854e-2a7497e32c1b/compatibility.svg)](https://sketchpacks.com/bomberstudios/Cleanup-Useless-Groups)
 
 Have you ever wished you could turn this
 
