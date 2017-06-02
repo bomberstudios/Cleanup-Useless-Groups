@@ -19,6 +19,7 @@
     ]
   },
   "identifier" : "com.example.sketch.d2c66cff-a235-44dd-854e-2a7497e32c1b",
+  "appcast": "https://api.sketchpacks.com/v1/plugins/com.example.sketch.d2c66cff-a235-44dd-854e-2a7497e32c1b/appcast",
   "authorEmail" : "ale@sketchapp.com",
   "name" : "Cleanup Useless Groups"
 }
