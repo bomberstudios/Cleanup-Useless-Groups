@@ -25,7 +25,7 @@ function unrollGroupsInLayer(layer){
       // This is an empty group, kill it with 🔥
       layer.removeFromParent()
     }
-    if(layer.layers().count() == 1 && layer.layers().firstObject().className() == "MSLayerGroup") {
+    if(layer.layers().count() == 1 && layer.className() == "MSLayerGroup" && layer.layers().firstObject().className() == "MSLayerGroup") {
       // Group contains just another group, so let's call ourselves again
       var newLayer = layer.ungroup()
       unrollGroupsInLayer(newLayer.firstObject())
