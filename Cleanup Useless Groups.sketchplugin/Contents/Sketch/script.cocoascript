@@ -11,24 +11,22 @@ var onRun = function(context) {
 
   for (var i=0; i < [layers count]; i++) {
     var layer = [layers objectAtIndex:i]
-    if(layer.className() == "MSLayerGroup" || layer.className() == "MSArtboardGroup"){
-      unrollGroupsInLayer(layer)
-    }
+    unrollGroupsInLayer(layer)
   }
 
 };
 
 function unrollGroupsInLayer(layer){
   log("unrollGroupsInLayer: " + layer)
-  if (layer.className() == "MSLayerGroup" || layer.className() == "MSArtboardGroup") {
+  if (layer.className() == "MSLayerGroup" || layer.className() == "MSArtboardGroup" || layer.className() == "MSSymbolMaster") {
     if(layer.layers().count() == 0) {
       // This is an empty group, kill it with 🔥
       layer.removeFromParent()
     }
     if(layer.layers().count() == 1 && layer.layers().firstObject().className() == "MSLayerGroup") {
-      // Group contains just another group, so let's call ourselves again
-      var newLayer = layer.ungroup()
-      unrollGroupsInLayer(newLayer.firstObject())
+      // Group contains just another group, so let's ungroup and call ourselves again
+      layer.layers().firstObject().ungroup()
+      unrollGroupsInLayer(layer)
     } else {
       var layers = layer.layers()
       for (var i=0; i < [layers count]; i++) {
